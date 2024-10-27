@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jquery basico</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-light">
+
+<div class="container">
+<!-- Título -->
+<h1 id="pageTitle" class="display-4 mb-5">¡Mirá la siguiente imagen!</h1>
+
+<!-- Botones -->
+<div class="mb-4">
+    <button id="hideButton" class="btn btn-danger">Ocultar Imagen</button> <!-- Rojo -->
+    <button id="showButton" class="btn btn-success">Mostrar Imagen</button> <!-- Verde -->
+
+</div>
+
+<!-- Imagen -->
+<img id="image" src="foto.png" class="imagen" alt="Imagen de ejemplo">
+</div>
+
+<script>
+  // Función para ocultar la imagen y cambiar el título
+$("#hideButton").click(function() {
+    $("#image").hide();
+    $("#pageTitle").text("¡No tenemos ninguna imagen!");
+});
+
+  // Función para mostrar la imagen y cambiar el título
+$("#showButton").click(function() {
+    $("#image").show();
+    $("#pageTitle").text("¡Mirá la siguiente imagen!");
+});
+</script>
+
+<!-- Bootstrap JS and dependencies (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
